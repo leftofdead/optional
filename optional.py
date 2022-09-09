@@ -67,3 +67,15 @@ def optional(default=UNSET, exceptions=Exception, callback=None):
         return middle_fn
 
     return outer_fn
+
+#=========================================================================================
+
+# Add 'handle_exception' to your class as a handler
+@optional(exceptions=KeyError, callback="handle_exception")
+def from_dict(self, a_dict, key=None, dest=None):
+    return a_dict[key]
+
+# Add 'handle_exception' to your class as a handler
+@optional(exceptions=IndexError, callback="handle_exception")
+def from_list(self, a_list, index):
+    return a_list[index]
