@@ -9,6 +9,8 @@ logger = logging.getLogger()
 # Placeholder for values where 'None' is a valid value
 UNSET = "UNSET"
 
+# A decorator designed to minimize handling when copying an attribute into a calss/data structure
+
 # When data cannot be retrieved from the source, the default value returned will be prioritized as follows:
 #   1) The value for the parameter "default" in the call to 'middle_fn', unless that value is UNSET
 #   2) The value returned from the function supplied in callback, unlesscallback is None
